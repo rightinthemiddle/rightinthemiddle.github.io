@@ -48,7 +48,7 @@
       <enclosure url="{{ post.file }}"
                  type="audio/mpeg"
                  length="{{ post.duration }}"/>
-      <guid permalink="false">{{ post.url }}</guid>
+      <guid>{{ site.url }}{{ post.url }}</guid>
       <pubDate>{{ post.date | date: "%a, %d %b %Y %T %Z" }}</pubDate>
       <itunes:title>{{ post.title }}</itunes:title>
       <itunes:duration>{{ post.duration }}</itunes:duration>
