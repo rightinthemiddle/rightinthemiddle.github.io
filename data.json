@@ -1,0 +1,27 @@
+---
+---
+{
+  "products": {
+    {% for product in site.data.products %}
+        "{{ product[0] }}": "{{ product[1] }}"{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  },
+  "employees": {
+{% for data in site.data.employees %}
+{% assign kerberos = data[0] %}
+{% assign employee = data[1] %}
+    "{{ kerberos }}": {
+      "this_week": [
+        {% for week in employee.this_week %}
+        "{{ week.products | join: '","' }}"{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ],
+      "next_week": [
+        {% for week in employee.next_week %}
+        "{{ week.products | join: '","' }}"{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
+    }{% unless forloop.last %},{% endunless %}
+{% endfor %}
+  }
+}

@@ -1,0 +1,19 @@
+name: Right in the Middle
+description: A grumpy geek and a clumsy assistant will try to make your ideas shine with a different way to present technical content.
+
+encoding: utf-8
+
+url: https://www.rightinthemiddle.io
+title: Right in the Middle
+
+feed: feed.xml
+
+podcast_logo: assets/images/cover.png
+
+permalink: /episodes/:title
+
+sass:
+  style: compressed
+
+plugins:
+  - liquid-md5

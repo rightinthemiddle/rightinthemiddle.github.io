@@ -1,0 +1,69 @@
+---
+---
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+     xmlns:googleplay="http://www.google.com/schemas/play-podcasts/1.0"
+     xmlns:spotify="http://www.spotify.com/ns/rss"
+     xmlns:media="http://search.yahoo.com/mrss/"
+     version="2.0">
+  <channel>
+    <title>{{ site.name }}</title>
+    <description>{{ site.description }}</description>
+    <link>{{ site.url }}</link>
+    <language>en-us</language>
+    <copyright>&#xA9;2020</copyright>
+    <image>
+      <url>{{ site.url }}/{{ site.podcast_logo }}</url>
+      <title>{{ site.name }}</title>
+      <link>{{ site.url }}</link>
+    </image>
+    <pubDate>{{ site.posts.first.date | date: "%a, %d %b %Y %T %Z" }}</pubDate>
+    <lastBuildDate>{{ "now" | date: "%a, %d %b %Y %T %Z" }}</lastBuildDate>
+    <atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml"/>
+    <itunes:owner>
+      <itunes:name>{{ site.data.owner.name }}</itunes:name>
+      <itunes:email>{{ site.data.owner.email }}</itunes:email>
+    </itunes:owner>
+    <itunes:category text="Technology"/>
+    <itunes:keywords>technology, geek, grumpy, teca, pirate, crazy, development</itunes:keywords>
+    <itunes:explicit>no</itunes:explicit>
+    <itunes:image href="{{ site.url }}/{{ site.podcast_logo }}"/>
+    <itunes:author>{{ site.data.owner.name }}</itunes:author>
+    <itunes:summary>{{ site.description }}</itunes:summary>
+    <itunes:subtitle>{{ site.short_description }}</itunes:subtitle>
+    {% for post in site.posts %}
+    <item>
+      <title>{{ post.title }}</title>
+      <link>{{ site.url }}{{ post.url }}</link>
+      <description>{{ post.description }}</description>
+      <content:encoded>
+        <![CDATA[
+{{ post.description }}
+]]>
+      </content:encoded>
+      <enclosure url="{{ post.file }}"
+                 type="audio/mpeg"
+                 length="{{ post.duration }}"/>
+      <guid permalink="false">{{ post.url }}</guid>
+      <pubDate>{{ post.date | date: "%a, %d %b %Y %T %Z" }}</pubDate>
+      <itunes:title>{{ post.title }}</itunes:title>
+      <itunes:duration>{{ post.duration }}</itunes:duration>
+      <itunes:summary>{{ post.description }}</itunes:summary>
+      <itunes:subtitle>{{ post.description }}</itunes:subtitle>
+      <itunes:author>{{ site.data.owner.name }}</itunes:author>
+      <itunes:explicit>no</itunes:explicit>
+      <itunes:block>No</itunes:block>
+      <itunes:duration>{{ post.duration }}</itunes:duration>
+      <itunes:episode>{{ post.number }}</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <media:content url="{{ site.url }}/{{ site.podcast_logo }}" medium="image">
+        <media:title type="html">{{ post.name }}</media:title>
+      </media:content>
+    </item>
+    {% endfor %}
+  </channel>
+</rss>

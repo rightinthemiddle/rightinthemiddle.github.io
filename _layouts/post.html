@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<div class="container">
+  <article id="post">
+    {% assign post = page %}
+    <div>
+      <h1 class="text-left post-title">{{ post.title }}</h1>
+      {% include post-info.html %}
+      {% include post-tags.html %}
+      {% include share.html %}
+    </div>
+    {% include post-intro.html %}
+    <div class="post-content">
+      <p>
+        {{ post.description }}
+      </p>
+      {{ content }}
+    </div>
+    <div class="player">
+      <audio id="player" controls>
+        <source src="{{ post.file }}" type="audio/mp3" />
+      </audio>
+    </div>
+    {% include post-navigator.html %}
+  </article>
+</div>

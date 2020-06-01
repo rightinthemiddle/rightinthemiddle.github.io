@@ -1,0 +1,9 @@
+---
+layout: default
+---
+<div class="container">
+  <h1>Episodes</h1>
+  {% for post in site.posts %}
+    {% include post-summary.html %}
+  {% endfor %}
+</div>
