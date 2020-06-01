@@ -57,7 +57,6 @@
       <itunes:author>{{ site.data.owner.name }}</itunes:author>
       <itunes:explicit>no</itunes:explicit>
       <itunes:block>No</itunes:block>
-      <itunes:duration>{{ post.duration }}</itunes:duration>
       <itunes:episode>{{ post.number }}</itunes:episode>
       <itunes:episodeType>full</itunes:episodeType>
       <media:content url="{{ site.url }}/{{ site.data.podcast.cover }}" medium="image">
