@@ -7,160 +7,28 @@ body {
   text-align: justify;
 }
 
-.svg-logo {
-  width: 70px;
-  height: auto;
-}
-
-.share {
-  ul {
-    padding-left: 0;
-    li {
-      list-style: none;
-      display: inline;
-      padding-left: 10px;
-
-      a:hover {
-        text-decoration: none;
-      }
-    }
-  }
-}
-
-.post-details {
-  font-style: italic;
-}
-
-.post-info {
-  padding-left: 0;
-  li {
-    list-style: none;
-    display: inline;
-    padding-left: 10px;
-
-    i {
-      padding-right: 10px;
-    }
-  }
-}
-
 #content {
   padding-top: 30px;
-}
 
-.post-date {
-
-}
-
-.post-title {
-
-}
-
-.post-intro {
-
-}
-
-.search-input {
-  padding-bottom: 1em;
-}
-
-#search-result {
-  display: none;
-}
-
-#btn-clear-search {
-  display: none;
-}
-
-.post-tag {
-
-}
-
-.category {
-  font-weight: 300;
-}
-
-.handwritten {
-
-}
-
-article {
-
-  p {
-    padding-bottom: 15px;
+  h1 {
+    padding-bottom: 30px;
   }
 
-  blockquote p {
-
-  }
-
-  .meta {
-    padding-top: 6px;
-    font-style: italic;
-    text-align: right;
-  }
-
-  .post-title {
-
-  }
-
-  img {
-    display: block;
-    margin: 0 auto 1em auto;
-    max-width: 100%;
-    border: 2px solid #161616;
-    border-radius: 1%;
-  }
-
-  .post-info {
-    li {
-      img {
-        margin: auto auto auto auto;
-        display: inherit;
-        width: 25px;
-        border: none;
-      }
-    }
-  }
-
-}
-
-.logo {
-  text-align: left;
-}
-
-.intro {
-  font-style: italic;
-}
-
-.post-preview {
-  padding-top: 30px;
-}
-
-.post-navigator {
-  padding-top: 35px;
-  padding-bottom: 1em;
   li {
     list-style: none;
     display: inline;
-    padding-right: 2em;
+    padding-right: 10px;
   }
-}
 
-.next-post {
-  text-align: left;
-}
+  .episode {
+    padding-bottom: 30px;
+  }
 
-.previous-post {
-  text-align: right;
-}
+  .episode-description {
+    font-size: 85%;
+    font-style: italic;
+  }
 
-.post-list {
-  text-align: center;
-}
-
-#description {
-  display: none;
 }
 
 #footer {

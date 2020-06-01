@@ -31,32 +31,32 @@
     <itunes:author>{{ site.data.owner.name }}</itunes:author>
     <itunes:summary>{{ site.description }}</itunes:summary>
     <itunes:subtitle>{{ site.short_description }}</itunes:subtitle>
-    {% for post in site.posts %}
+    {% for episode in site.data.episodes %}
     <item>
-      <title>{{ post.title }}</title>
-      <link>{{ site.url }}{{ post.url }}</link>
-      <description>{{ post.description }}</description>
+      <title>{{ episode.title }}</title>
+      <link>{{ site.url }}</link>
+      <description>{{ episode.description }}</description>
       <content:encoded>
         <![CDATA[
-{{ post.description }}
+{{ episode.description }}
 ]]>
       </content:encoded>
-      <enclosure url="{{ post.file.url }}"
+      <enclosure url="{{ episode.file.url }}"
                  type="audio/mpeg"
-                 length="{{ post.file.size }}"/>
-      <guid>{{ site.url }}{{ post.url }}</guid>
-      <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-      <itunes:title>{{ post.title }}</itunes:title>
-      <itunes:duration>{{ post.duration }}</itunes:duration>
-      <itunes:summary>{{ post.description }}</itunes:summary>
-      <itunes:subtitle>{{ post.description }}</itunes:subtitle>
+                 length="{{ episode.file.size }}"/>
+      <guid isPermalink="false">{{ episode.date }}-{{ episode.title | downcase | replace: " ", "-" }}</guid>
+      <pubDate>{{ episode.date | date_to_rfc822 }}</pubDate>
+      <itunes:title>{{ episode.title }}</itunes:title>
+      <itunes:duration>{{ episode.duration }}</itunes:duration>
+      <itunes:summary>{{ episode.description }}</itunes:summary>
+      <itunes:subtitle>{{ episode.description }}</itunes:subtitle>
       <itunes:author>{{ site.data.owner.name }}</itunes:author>
       <itunes:explicit>no</itunes:explicit>
       <itunes:block>No</itunes:block>
-      <itunes:episode>{{ post.number }}</itunes:episode>
+      <itunes:episode>{{ forloop.index }}</itunes:episode>
       <itunes:episodeType>full</itunes:episodeType>
       <media:content url="{{ site.url }}/{{ site.data.podcast.cover }}" medium="image">
-        <media:title type="html">{{ post.name }}</media:title>
+        <media:title type="html">{{ episode.title }}</media:title>
       </media:content>
     </item>
     {% endfor %}

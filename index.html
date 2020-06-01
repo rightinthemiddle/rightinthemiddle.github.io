@@ -3,7 +3,21 @@ layout: default
 ---
 <div class="container">
   <h1>Episodes</h1>
-  {% for post in site.posts %}
-    {% include post-summary.html %}
+  {% for episode in site.data.podcast.episodes %}
+  <div class="episode">
+    <h2>
+      {{ forloop.index }} - {{ episode.title }}
+    </h2>
+    <p class="small">
+      <i class="fa fa-calendar"></i>
+      <span class="post-date">{{ episode.date }}</span>
+    </p>
+    <p class="episode-description">
+      {{ episode.description }}
+    </p>
+    <audio id="player" controls>
+      <source src="{{ episode.file.url }}" type="audio/mp3"/>
+    </audio>
+  </div>
   {% endfor %}
 </div>
