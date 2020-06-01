@@ -17,7 +17,7 @@
     <language>en-us</language>
     <copyright>&#xA9;2020</copyright>
     <image>
-      <url>{{ site.url }}/{{ site.podcast_logo }}</url>
+      <url>{{ site.url }}/{{ site.data.podcast.cover }}</url>
       <title>{{ site.name }}</title>
       <link>{{ site.url }}</link>
     </image>
@@ -29,9 +29,9 @@
       <itunes:email>{{ site.data.owner.email }}</itunes:email>
     </itunes:owner>
     <itunes:category text="Technology"/>
-    <itunes:keywords>technology, geek, grumpy, teca, pirate, crazy, development</itunes:keywords>
+    <itunes:keywords>{{ site.data.podcast.tags | join: ", " }}</itunes:keywords>
     <itunes:explicit>no</itunes:explicit>
-    <itunes:image href="{{ site.url }}/{{ site.podcast_logo }}"/>
+    <itunes:image href="{{ site.url }}/{{ site.data.podcast.cover }}"/>
     <itunes:author>{{ site.data.owner.name }}</itunes:author>
     <itunes:summary>{{ site.description }}</itunes:summary>
     <itunes:subtitle>{{ site.short_description }}</itunes:subtitle>
@@ -60,7 +60,7 @@
       <itunes:duration>{{ post.duration }}</itunes:duration>
       <itunes:episode>{{ post.number }}</itunes:episode>
       <itunes:episodeType>full</itunes:episodeType>
-      <media:content url="{{ site.url }}/{{ site.podcast_logo }}" medium="image">
+      <media:content url="{{ site.url }}/{{ site.data.podcast.cover }}" medium="image">
         <media:title type="html">{{ post.name }}</media:title>
       </media:content>
     </item>

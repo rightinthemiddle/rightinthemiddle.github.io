@@ -1,14 +1,8 @@
+url: https://www.rightinthemiddle.io
 name: Right in the Middle
-description: A grumpy geek and a clumsy assistant will try to make your ideas shine with a different way to present technical content.
+description: A grumpy geek and a clumsy assistant will make your ideas shine with a different way of presenting technical content.
 
 encoding: utf-8
-
-url: https://www.rightinthemiddle.io
-title: Right in the Middle
-
-feed: feed.xml
-
-podcast_logo: assets/images/cover.jpg
 
 permalink: /episodes/:title
 
