@@ -41,9 +41,9 @@
 {{ post.description }}
 ]]>
       </content:encoded>
-      <enclosure url="{{ post.file }}"
+      <enclosure url="{{ post.file.url }}"
                  type="audio/mpeg"
-                 length="{{ post.duration }}"/>
+                 length="{{ post.file.size }}"/>
       <guid>{{ site.url }}{{ post.url }}</guid>
       <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
       <itunes:title>{{ post.title }}</itunes:title>

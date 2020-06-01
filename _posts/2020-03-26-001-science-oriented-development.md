@@ -11,5 +11,7 @@ tags:
 - apollo 11
 - netflix
 description: Have you ever thought about development as a science?
-file: https://rightinthemiddle.s3.eu-north-1.amazonaws.com/Right+in+the+Middle+-+001+-+Science+Oriented+Development.mp3
+file:
+  url: https://rightinthemiddle.s3.eu-north-1.amazonaws.com/Right+in+the+Middle+-+001+-+Science+Oriented+Development.mp3
+  size: 15181183
 ---
