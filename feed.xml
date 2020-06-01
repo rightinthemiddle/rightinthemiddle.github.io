@@ -10,7 +10,7 @@
     <title>{{ site.name }}</title>
     <description>{{ site.description }}</description>
     <link>{{ site.url }}</link>
-    <language>en-us</language>
+    <language>{{ site.data.podcast.language }}</language>
     <copyright>&#xA9;2020</copyright>
     <image>
       <url>{{ site.url }}/{{ site.data.podcast.cover }}</url>

@@ -1,5 +1,6 @@
 feed: feed.xml
 cover: assets/images/cover.jpg
+language: en-us
 tags:
   - storytelling
   - technology
