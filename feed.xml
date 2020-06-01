@@ -21,8 +21,8 @@
       <title>{{ site.name }}</title>
       <link>{{ site.url }}</link>
     </image>
-    <pubDate>{{ site.posts.first.date | date: "%a, %d %b %Y %T %Z" }}</pubDate>
-    <lastBuildDate>{{ "now" | date: "%a, %d %b %Y %T %Z" }}</lastBuildDate>
+    <pubDate>{{ site.posts.first.date | date_to_rfc822 }}</pubDate>
+    <lastBuildDate>{{ "now" | date_to_rfc822 }}</lastBuildDate>
     <atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml"/>
     <itunes:owner>
       <itunes:name>{{ site.data.owner.name }}</itunes:name>
@@ -49,7 +49,7 @@
                  type="audio/mpeg"
                  length="{{ post.duration }}"/>
       <guid>{{ site.url }}{{ post.url }}</guid>
-      <pubDate>{{ post.date | date: "%a, %d %b %Y %T %Z" }}</pubDate>
+      <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
       <itunes:title>{{ post.title }}</itunes:title>
       <itunes:duration>{{ post.duration }}</itunes:duration>
       <itunes:summary>{{ post.description }}</itunes:summary>
