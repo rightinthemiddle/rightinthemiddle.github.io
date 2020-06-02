@@ -3,7 +3,7 @@ layout: default
 ---
 <div class="container">
   <h1>Episodes</h1>
-  {% for episode in site.data.podcast.episodes %}
+  {% for episode in site.data.episodes %}
   <div class="episode">
     <h2>
       {{ forloop.index }} - {{ episode.title }}
